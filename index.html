@@ -1,328 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Портфолио QA Engineer — Макмак Александр</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    header {
-      background: radial-gradient(circle at top left, #1d4ed8, #020617 55%);
-      color: #fff;
-      padding: 40px 20px 60px;
-    }
-    .header-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
-      gap: 32px;
-      align-items: center;
-    }
-    .name {
-      font-size: 34px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .role {
-      font-size: 18px;
-      opacity: 0.9;
-      margin-bottom: 16px;
-    }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-    .tag {
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.8);
-      border: 1px solid rgba(148,163,184,0.4);
-    }
-    .hero-img {
-      border-radius: 24px;
-      overflow: hidden;
-      background: #020617;
-      border: 1px solid rgba(148,163,184,0.45);
-      box-shadow: 0 24px 60px rgba(15,23,42,0.7);
-    }
-    .hero-img img {
-      width: 100%;
-      display: block;
-    }
-    .container {
-      max-width: 960px;
-      margin: -40px auto 60px;
-      padding: 0 20px 20px;
-    }
-    h2.section-title {
-      font-size: 22px;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    h2.section-title::before {
-      content: "";
-      width: 4px;
-      height: 22px;
-      border-radius: 999px;
-      background: linear-gradient(to bottom, #3b82f6, #22c55e);
-    }
-    .card {
-      background: rgba(15,23,42,0.96);
-      border-radius: 18px;
-      padding: 22px 22px 20px;
-      margin-top: 14px;
-      border: 1px solid rgba(148,163,184,0.35);
-      box-shadow: 0 18px 45px rgba(15,23,42,0.8);
-    }
-    .contacts p {
-      margin: 4px 0;
-      font-size: 14px;
-      color: #cbd5f5;
-    }
-    .contacts strong {
-      color: #e5e7eb;
-    }
-    ul {
-      margin: 8px 0 0;
-      padding-left: 20px;
-      color: #cbd5f5;
-      font-size: 14px;
-    }
-    .project-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: #e5e7eb;
-    }
-    .project-links {
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 2px 10px;
-      border-radius: 999px;
-      background: rgba(30,64,175,0.45);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #bfdbfe;
-      margin-bottom: 4px;
-    }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
-      gap: 20px;
-    }
-    .about-text {
-      font-size: 14px;
-      color: #cbd5f5;
-    }
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: #64748b;
-      padding: 20px 0 30px;
-    }
-    @media (max-width: 768px) {
-      .header-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .container {
-        margin-top: -20px;
-      }
-      .grid-2 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Александр Макмак — QA Engineer. Ручное тестирование Web и API, опыт Skyrexio, тест-кейсы и примеры работ.">
+<meta name="theme-color" content="#f4f5f7"><title>Александр Макмак · QA Engineer</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/lucide.min.js"></script><script defer src="content/portfolio.js"></script><script defer src="content/cases.js"></script><script defer src="assets/app.js"></script>
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <div>
-        <div class="name">Макмак Александр Юрьевич</div>
-        <div class="role">QA Engineer / Инженер по тестированию</div>
-        <p>Занимаюсь тестированием веб-приложений, пишу тест-кейсы и чек-листы, работаю с API и инструментами
-          разработчика. Ориентирован на качество продукта и прозрачную тестовую документацию.</p>
-        <div class="tags">
-          <span class="tag">Web-тестирование</span>
-          <span class="tag">Mobile (Android)</span>
-          <span class="tag">API / Postman</span>
-          <span class="tag">Jira / Yougile</span>
-          <span class="tag">Python / pytest (база)</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Chrome DevTools</span>
-        </div>
-      </div>
-      <div class="hero-img">
-        <!-- Ссылка на фото возвращена к исходному виду по вашему требованию -->
-        <img src="c8d0ecc3-cec8-405b-b91f-df72480305f8.png" alt="QA Engineer обложка" />
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <h2 class="section-title">Контакты</h2>
-    <section class="card contacts">
-      <p><strong>Телефон:</strong> +7 918-218-75-69</p>
-      <p><strong>Email:</strong> <a href="mailto:user.trail@gmail.com">user.trail@gmail.com</a></p>
-      <p><strong>Telegram:</strong> <a href="https://t.me/Alex2166600" target="_blank">@Alex2166600</a></p>
-      <p><strong>Город:</strong> Краснодар</p>
-    </section>
-
-    <h2 class="section-title">Обо мне и навыки</h2>
-    <section class="card">
-      <div class="grid-2">
-        <div class="about-text">
-          <p>Внимательный к деталям и структурный специалист, ориентированный на улучшение качества продукта.
-            Практикую ручное тестирование веб и мобильных приложений, прорабатываю тестовую документацию и проверяю как UI, так и API.</p>
-          <p>Хочу расти в направлении ручного QA и постепенно углубляться в автоматизацию на Python.</p>
-        </div>
-        <div>
-          <ul>
-            <li>Тестирование Web (UI/UX, адаптивность) и Mobile (Android)</li>
-            <li>Разработка и ведение тест-кейсов, чек-листов, баг-репортов</li>
-            <li>Функциональное и нефункциональное тестирование</li>
-            <li>Тест-дизайн, анализ требований и спецификаций</li>
-            <li>Jira, Yougile — ведение доски задач и тестовой документации</li>
-            <li>API-тестирование: Postman (коллекции, автотесты)</li>
-            <li>Chrome DevTools для анализа запросов и логов</li>
-            <li>SQL — простые запросы для проверки данных</li>
-            <li>Git — базовая работа с репозиториями</li>
-            <li>Английский язык — уровень B2</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <h2 class="section-title">Проекты (портфолио)</h2>
-
-    <section class="card">
-      <div class="pill">Проект 1</div>
-      <div class="project-title">Автотесты на Python (Skillbox)</div>
-      <div class="project-links">
-        <strong>GitLab:</strong>
-        <a href="https://gitlab.skillbox.ru/aleksandr_makmak/python-autotests-basic/-/tree/main/final_project_pizzeria-autotests" target="_blank">
-          Репозиторий с автотестами
-        </a>
-      </div>
-      <ul>
-        <li>Создан набор автотестов на Python с использованием pytest.</li>
-        <li>Настроен репозиторий в GitLab: структура проекта, ветки, коммиты.</li>
-        <li>Реализованы фикстуры, раздельные файлы для тестов и данных.</li>
-        <li>Настроено логирование и формирование отчётов по прогону тестов.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <div class="pill">Проект 2</div>
-      <div class="project-title">Тестирование веб-приложения</div>
-      <div class="project-links">
-        <strong>Yougile:</strong>
-        <a href="https://ru.yougile.com/board/v8quq6ay0esa" target="_blank">
-          Доска задач и тест-документации
-        </a>
-      </div>
-      <ul>
-        <li>Ведена доска задач и тестовой документации в Yougile.</li>
-        <li>Созданы тест-кейсы, чек-листы и баг-репорты.</li>
-        <li>Проведено API- и UI-тестирование.</li>
-        <li>Проверены сценарии корзины, фильтров, регистрации, каталога.</li>
-        <li>Выявлены критические дефекты по основным процессам.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <div class="pill">Проект 3</div>
-      <div class="project-title">API-тестирование (Postman)</div>
-      <div class="project-links">
-        <strong>Postman:</strong> 
-        <a href="https://alex-5768765.postman.co/workspace/1588d05b-fcf8-4025-8585-26396b519452/documentation/45735074-ed8ad04c-f5dd-44b8-af7d-92f262de9dfc" target="_blank">
-          Открыть документацию
-        </a>
-      </div>
-      <ul>
-        <li>Создана коллекция API-запросов.</li>
-        <li>Добавлены автотесты через pre-request и tests-скрипты.</li>
-        <li>Использованы переменные окружений.</li>
-        <li>Оформлена документация в Postman.</li>
-        <li>Протестированы эндпоинты и обработка ошибок.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <div class="pill">Проект 4 (Mobile)</div>
-      <div class="project-title">Комплексное тестирование мобильного приложения Skillcinema (Android)</div>
-      <div class="project-links">
-        <strong>Jira:</strong>
-        <a href="https://usertrail.atlassian.net/jira/software/projects/SKIL/boards/2?atlOrigin=eyJpIjoiZGU5N2U5NDMwNTY5NGQ3YWI5YjRkNWEyZTlmMTIyNjMiLCJwIjoiaiJ9" target="_blank">
-          Доска задач и баг-репорты
-        </a>
-      </div>
-      <ul>
-        <li>Выполнено комплексное функциональное тестирование мобильного приложения Skillcinema на ОС Android.</li>
-        <li>Разработаны и выполнены тестовые сценарии, покрывающие UI и поведение приложения при работе с сетью и зарядом батареи.</li>
-        <li>Выявлены критические дефекты, влияющие на стабильность продукта.</li>
-        <li>Подготовлено заключение для заказчика с оценкой рисков и рекомендациями по исправлению багов перед показом инвесторам.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <div class="pill">Проект 5 (Фриланс)</div>
-      <div class="project-title">Ручное тестирование Telegram-бота и Mini App</div>
-      <div class="project-links">
-        <strong>Отчёт:</strong>
-        <a href="https://docs.google.com/spreadsheets/d/1kWoKadtcegFqzqoYW936k6duzYFB3zegZZdln78Nk-U/edit?usp=sharing" target="_blank">
-          Google-таблица с результатами тестирования
-        </a>
-      </div>
-      <ul>
-        <li>Проведено ручное тестирование Telegram-бота и Mini App магазина одежды в рамках фриланс-заказа.</li>
-        <li>Проверены ключевые сценарии: навигация, каталог, корзина, оформление заказа и личный кабинет.</li>
-        <li>Сравнён интерфейс с макетами Figma (шрифты, отступы, структура экранов).</li>
-        <li>Сформирован структурированный отчёт с указанием фактического поведения и приоритетов для каждого замечания.</li>
-      </ul>
-    </section>
-
-    <h2 class="section-title">Образование и курсы</h2>
-    <section class="card">
-      <ul>
-        <li><strong>Московский финансово-промышленный университет «Синергия»</strong> — Бакалавр юриспруденции</li>
-        <li><strong>SKILLBOX — Инженер по тестированию (2025)</strong>: ручное тестирование, веб-тестирование, мобильное тестирование (Android), SQL, Git, основы Python.</li>
-      </ul>
-    </section>
-    
-  </main>
-
-  <footer>
-    Портфолио QA Engineer — Макмак Александр
-  </footer>
-</body>
-</html>
+<a class="skip" href="#projects">Перейти к проектам</a>
+<header class="header wrap">
+<a class="brand" href="#"><span class="monogram">AM<span>.</span></span><span>Александр Макмак<br><small>QA Engineer</small></span></a>
+<nav aria-label="Основная навигация"><a href="#projects">Проекты</a><a href="#artifacts">Артефакты</a><a href="#experience">Опыт</a></nav>
+<a class="header-contact" href="https://t.me/AlexMakmak" target="_blank" rel="noopener noreferrer">На связи <i data-lucide="arrow-up-right"></i></a>
+</header>
+<main>
+<section class="hero" aria-labelledby="hero-title"><div class="wrap hero-inner">
+<p class="eyebrow"><span class="status-dot"></span> Web / API · Ручное тестирование</p>
+<h1 id="hero-title">Александр<br>Макмак<span>.</span></h1><p class="hero-role">QA Engineer</p>
+<p class="hero-copy">Проверяю не только интерфейс,<br>но и то, что происходит за ним.</p>
+<div class="hero-actions"><a class="button primary" href="#projects">Мои проекты <i data-lucide="arrow-down"></i></a><a class="button outline" href="assets/docs/resume.pdf" target="_blank" rel="noopener">Резюме <i data-lucide="file-down"></i></a></div>
+<div class="hero-meta"><span>Краснодар · Удалённо</span><a href="mailto:user.trail@gmail.com">user.trail@gmail.com <i data-lucide="arrow-up-right"></i></a></div>
+</div><div class="portrait-caption">Функциональное / Регрессионное / Интеграционное</div></section>
+<section id="projects" class="section wrap">
+<div class="section-heading"><div><p class="eyebrow">01 / Практика</p><h2>Работа, которую можно посмотреть</h2></div><span class="section-note">От сценария до подтверждённого результата</span></div>
+<article class="featured">
+<div class="featured-main"><div class="project-meta"><span class="pill">Командная стажировка</span><span>Февраль — июнь 2026</span></div><h3>Skyrexio<span class="project-index">/ 01</span></h3>
+<p class="project-subtitle">SaaS-платформа для трейдинга и управления активами</p><p>Smart Terminal, торговый дневник и P&amp;L. Проверял пользовательские сценарии, расчёты и обмен данными между интерфейсом и API.</p>
+<div class="tags"><span>Web</span><span>API</span><span>DevTools</span><span>Postman</span><span>SQL</span></div>
+<button class="text-button" data-project="skyrexio">Подробнее о моей работе <i data-lucide="arrow-up-right"></i></button></div>
+<div class="featured-evidence"><p class="eyebrow">Вклад в проект</p><div class="metric"><strong>500<span>+</span></strong><span>тест-кейсов и чек-листов</span></div><div class="metric"><strong>60<span>+</span></strong><span>зафиксированных дефектов</span></div><p class="source-note">За период стажировки, по рекомендательному письму Skyrexio.</p><a class="evidence-link" href="#artifacts"><i data-lucide="clipboard-check"></i> Примеры тест-кейсов <i data-lucide="arrow-down"></i></a></div>
+</article><div class="project-list" id="project-list"></div>
+</section>
+<section class="artifacts-band" id="artifacts"><div class="wrap section">
+<div class="section-heading"><div><p class="eyebrow">02 / Документация</p><h2>Тест-кейсы из реального проекта</h2></div><a class="text-button" href="assets/docs/test-cases.xlsx" download>Скачать XLSX <i data-lucide="download"></i></a></div>
+<div class="artifact-toolbar"><div class="segmented" role="group" aria-label="Приоритет тест-кейсов"><button aria-pressed="true" data-priority="all">Все <span>21</span></button><button aria-pressed="false" data-priority="High">High</button><button aria-pressed="false" data-priority="Medium">Medium</button><button aria-pressed="false" data-priority="Low">Low</button></div><label class="search"><i data-lucide="search"></i><input id="case-search" type="search" placeholder="Найти сценарий" aria-label="Поиск тест-кейсов"></label></div>
+<div class="table-container"><table><thead><tr><th scope="col">ID</th><th scope="col">Сценарий · Skyrexio / Торговый дневник</th><th scope="col">Приоритет</th><th scope="col"><span class="sr-only">Открыть</span></th></tr></thead><tbody id="case-list"></tbody></table></div>
+<div class="artifact-foot"><span id="case-count" aria-live="polite"></span><span>Экспорт TestRail · Автор: Александр Макмак</span><a href="assets/docs/test-cases.csv" download>CSV <i data-lucide="download"></i></a></div>
+</div></section>
+<section id="experience" class="section wrap"><div class="section-heading"><div><p class="eyebrow">03 / Профессиональный путь</p><h2>Опыт и инструменты</h2></div></div>
+<div class="experience-grid"><div class="timeline">
+<article><div class="timeline-meta">Март 2025 — настоящее время</div><h3>Яндекс</h3><p class="position">Специалист по тестированию</p><p>Мобильные Яндекс Карты: функциональные, регрессионные и интеграционные проверки на Android и iOS. Анализ трафика, логи и поведение приложения при изменении сетевых условий.</p></article>
+<article><div class="timeline-meta">Февраль — июнь 2026</div><h3>Performance Lab / Skyrexio</h3><p class="position">QA Intern</p><p>Web-интерфейс, API, торговые сценарии, тестовая документация, дефекты и ретест исправлений в команде.</p></article>
+<article><div class="timeline-meta">2025 — 2026</div><h3>Обучение и проектная практика</h3><p>Skillbox: ручное тестирование. E-commerce, API, мобильное приложение и Telegram Mini App. Основы Python и pytest.</p></article>
+</div><div class="skills">
+<div class="skill-group"><h3><i data-lucide="monitor"></i> Web и API</h3><p>DevTools · Postman · Swagger · HTTP / JSON · SQL · PostgreSQL</p></div>
+<div class="skill-group"><h3><i data-lucide="clipboard-check"></i> Тестовый процесс</h3><p>Тест-дизайн · Чек-листы · Тест-кейсы · Баг-репорты · Регресс · Ретест</p></div>
+<div class="skill-group"><h3><i data-lucide="smartphone"></i> Mobile</h3><p>Android / iOS · Charles Proxy · Android Studio · ADB</p></div>
+<div class="skill-group"><h3><i data-lucide="git-branch"></i> Работа в команде</h3><p>Git · Jira · TestRail · YouGile · Confluence · Scrum</p></div>
+<div class="growth"><span class="status-dot"></span><p>Развиваюсь в автоматизации.<br><strong>Python · pytest · основы CI/CD</strong></p></div>
+</div></div></section>
+<section class="contact-band" id="contact"><div class="wrap contact-inner"><div><p class="eyebrow">04 / Контакт</p><h2>Давайте познакомимся<span>.</span></h2><p>Рассматриваю позиции QA с фокусом на ручное тестирование Web/API.</p></div><div class="contact-actions"><a class="button primary" href="https://t.me/AlexMakmak" target="_blank" rel="noopener noreferrer">Написать в Telegram <i data-lucide="send"></i></a><a href="mailto:user.trail@gmail.com">user.trail@gmail.com <i data-lucide="arrow-up-right"></i></a><a href="https://github.com/alex-makmak" target="_blank" rel="noopener noreferrer">GitHub <i data-lucide="code-xml"></i></a></div></div></section>
+</main>
+<footer class="wrap footer"><span>Александр Макмак · QA Engineer</span><span>Портфолио / 2026</span><a href="#">Наверх <i data-lucide="arrow-up"></i></a></footer>
+<dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><span class="eyebrow" id="dialog-label"></span><button class="icon-button" id="dialog-close" aria-label="Закрыть" title="Закрыть"><i data-lucide="x"></i></button></div><div id="dialog-content"></div></dialog>
+</body></html>
