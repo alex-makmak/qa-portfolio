@@ -17,6 +17,7 @@ const path = require('node:path');
       await page.goto(process.env.PORTFOLIO_URL || 'http://127.0.0.1:5193');
       await page.waitForSelector('[data-case="C389"]');
       assert.deepEqual(await page.locator('a[href^="https://t.me/"]').evaluateAll(links=>links.map(link=>link.href)),['https://t.me/AlexMakmak','https://t.me/AlexMakmak']);
+      assert.equal(await page.locator('#experience article').filter({has:page.getByRole('heading',{name:'Яндекс',exact:true})}).locator('.timeline-meta').innerText(),'Сентябрь 2025 — настоящее время');
       assert.equal(await page.locator('#case-list tr').count(),21);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false, 'Horizontal overflow at '+width);
       assert.equal(await page.evaluate(()=>document.querySelector('#projects').getBoundingClientRect().top<innerHeight),true,'Next section not visible at '+width);
